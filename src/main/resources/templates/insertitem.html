@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link th:insert="~{head.html}">
+    </head>
+    <body>
+        <div class="container" th:insert="~{navbar.html}">
+        </div>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-6 mx-auto">
+                    <form th:action="@{'/toadditem'}" method="post">
+                        <div class="row">
+                            <div class="col-12">
+                                <label>NAME :</label>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <input type="text" name="name" placeholder="Insert name..." class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <label>SURNAME :</label>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <input type="text" name="surname" placeholder="Insert surname..." class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <label>EXAM :</label>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-12">
+                                <input type="number" name="exam" placeholder="Insert exam..." class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <button class="btn btn-success">ADD ITEM</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
